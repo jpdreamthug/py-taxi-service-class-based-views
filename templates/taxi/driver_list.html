@@ -3,9 +3,9 @@
   <h1>Drivers List</h1>
   <ul>
   {% for driver in driver_list %}
-    <li><a href="{% url 'taxi:driver-detail' driver.id %}">{{ driver.username }}</a></li>
+    <li><a href="{% url 'taxi:driver-detail' pk=driver.id %}">{{ driver.username }}</a></li>
   {% empty %}
-    <p>No cars.</p>  
+    <p>No Drivers.</p>
   {% endfor %}
   </ul>
 {% endblock %}
